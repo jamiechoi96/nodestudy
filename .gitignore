@@ -24,3 +24,6 @@ build/
 
 # 테스트 관련 파일
 coverage/
+
+# .gitignore
+config.js

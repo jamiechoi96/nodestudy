@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const mysql = require('mysql2'); // MySQL 모듈 추가
 const app = express();
 
 // ✅ EJS 설정
@@ -61,4 +62,44 @@ app.get('/ip', (req, res) => {
 // ✅ 서버 실행
 app.listen(3000, () => {
   console.log('서버가 http://localhost:3000 에서 실행 중');
+});
+
+// MySQL 연결 설정
+const db = mysql.createConnection({
+  host: '192.168.0.105',
+  user: 'root',
+  password: '1234', // 비밀번호 설정
+  database: 'lg_hellovisionvod'   // 사용할 데이터베이스 설정
+});
+
+// MySQL 연결
+db.connect(err => {
+  if (err) {
+      console.error('MySQL 연결 실패:', err);
+      return;
+  }
+  console.log('MySQL 연결 성공');
+});
+
+// `/data` 경로에서 MySQL 데이터 조회 및 렌더링
+app.get('/data', (req, res) => {
+  const query = `
+      SELECT
+          asset_nm,
+          smry,
+          CONCAT(
+              LPAD(LEFT(disp_rtm, LENGTH(disp_rtm) - 2), 2, '0'), ':',
+              LPAD(RIGHT(disp_rtm, 2), 2, '0')
+          ) AS disp_rtm_formatted
+      FROM vod_mart
+      WHERE asset_nm LIKE '%런닝맨%';
+  `;
+
+  db.query(query, (err, results) => {
+      if (err) {
+          console.error('쿼리 오류:', err);
+          return res.send('데이터를 불러오는 중 오류가 발생했습니다.');
+      }
+      res.render('data', { data: results });
+  });
 });

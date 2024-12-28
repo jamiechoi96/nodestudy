@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>런닝맨 데이터</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>런닝맨 데이터</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Asset Name</th>
+          <th>Summary</th>
+          <th>Display Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(row => { %>
+        <tr>
+          <td><%= row.asset_nm %></td>
+          <td><%= row.smry %></td>
+          <td><%= row.disp_rtm_formatted %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
