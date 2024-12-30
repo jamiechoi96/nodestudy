@@ -27,3 +27,6 @@ coverage/
 
 # .gitignore
 config.js
+
+# .env 파일은 버전 관리에 포함하지 않음
+.env
