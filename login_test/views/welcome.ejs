@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <div class="welcome-container">
-    <div class="welcome-box">
-      <img src="/image/<%= image %>" alt="<%= name %>" class="user-image">
-      <h2>환영합니다, <%= name %>님!</h2>
-      <p>로그인에 성공하셨습니다.</p>
-      <a href="/logout" class="logout-button">로그아웃</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="welcome-container">
+      <div class="welcome-box">
+        <img src="/image/<%= image %>" alt="<%= name %>" class="user-image" />
+        <h2>환영합니다, <%= name %>님!</h2>
+        <p>로그인에 성공하셨습니다.</p>
+        <a href="/" class="logout-button">로그아웃</a>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
