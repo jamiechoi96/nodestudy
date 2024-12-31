@@ -1,4 +1,6 @@
-/* 전체적인 스타일 */
+/* ======================== */
+/* 1. 전체적인 페이지 스타일 */
+/* ======================== */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
@@ -17,7 +19,9 @@ h1, h2 {
     text-align: center;
 }
 
-/* 로그인 폼 스타일 */
+/* ======================== */
+/* 2. 로그인 폼 스타일 */
+/* ======================== */
 #login-form {
     width: 100%;
     max-width: 400px;
@@ -58,7 +62,9 @@ h1, h2 {
     background-color: #45a049;
 }
 
-/* 회원가입 폼 스타일 */
+/* ======================== */
+/* 3. 회원가입 폼 스타일 */
+/* ======================== */
 #register-form {
     width: 100%;
     max-width: 400px;
@@ -99,7 +105,9 @@ h1, h2 {
     background-color: #0056b3;
 }
 
-/* welcome 페이지 스타일 */
+/* ======================== */
+/* 4. 환영 페이지 스타일 */
+/* ======================== */
 .welcome-container {
     width: 100%;
     max-width: 500px;
@@ -114,10 +122,11 @@ h1, h2 {
 }
 
 .welcome-container img {
-    width: 300px; /* 가로 크기 더 늘림 */
-    height: 500px; /* 세로 크기 더 줄임 */
-    border-radius: 10px; /* 직사각형 형태 유지 */
-    object-fit: cover;
+    width: 100%; /* 컨테이너의 너비에 맞춤 */
+    max-width: 300px; /* 최대 너비 설정 */
+    height: auto; /* 가로 비율을 유지하며 높이를 자동 조정 */
+    border-radius: 10px; /* 모서리를 둥글게 유지 */
+    object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 설정 */
     margin-bottom: 20px;
 }
 
@@ -148,8 +157,9 @@ h1, h2 {
     background-color: #0056b3;
 }
 
-
-/* 회원가입 폼 컨테이너 */
+/* ======================== */
+/* 5. 회원가입 폼 컨테이너 */
+/* ======================== */
 form {
     background: #fff;
     padding: 30px 40px;
@@ -160,7 +170,6 @@ form {
     box-sizing: border-box;
 }
 
-/* 라벨 스타일 */
 form label {
     font-size: 14px;
     font-weight: bold;
@@ -170,7 +179,6 @@ form label {
     text-align: left;
 }
 
-/* 입력 필드 스타일 */
 form input[type="text"],
 form input[type="password"],
 form input[type="file"] {
@@ -183,12 +191,10 @@ form input[type="file"] {
     font-size: 14px;
 }
 
-/* 파일 업로드 입력 스타일 */
 form input[type="file"] {
     padding: 5px;
 }
 
-/* 버튼 스타일 */
 form button {
     width: 100%;
     padding: 12px;
@@ -206,7 +212,9 @@ form button:hover {
     background-color: #388E3C;
 }
 
-/* 알림창 스타일 (JavaScript alert 대체 가능) */
+/* ======================== */
+/* 6. 알림창 스타일 */
+/* ======================== */
 .alert {
     color: red;
     font-size: 13px;
@@ -214,7 +222,10 @@ form button:hover {
     margin-bottom: 10px;
     text-align: left;
 }
-/* 전체 페이지 컨테이너 스타일 */
+
+/* ======================== */
+/* 7. 페이지 컨테이너 스타일 */
+/* ======================== */
 .page-container {
     display: flex;
     justify-content: center;
@@ -224,7 +235,6 @@ form button:hover {
     margin: 0;
 }
 
-/* 페이지 콘텐츠 스타일 */
 .page-content {
     text-align: center;
     background-color: #fff;
@@ -235,29 +245,31 @@ form button:hover {
     width: 100%;
 }
 
-/* 제목 스타일 */
+/* ======================== */
+/* 8. 페이지 제목 및 설명 스타일 */
+/* ======================== */
 .page-content h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* 설명 텍스트 스타일 */
 .page-content p {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
 }
 
-/* 버튼 컨테이너 (가로 배치) */
+/* ======================== */
+/* 9. 버튼 스타일 */
+/* ======================== */
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* 버튼 간 간격 */
+    gap: 20px;
     margin-top: 20px;
 }
 
-/* 버튼 스타일 */
 .button-container .btn {
     padding: 12px 24px;
     font-size: 16px;
@@ -270,7 +282,6 @@ form button:hover {
     text-align: center;
 }
 
-/* 로그인 버튼 스타일 */
 .button-container a:first-child .btn {
     background-color: #007bff;
     color: white;
@@ -280,7 +291,6 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* 회원가입 버튼 스타일 */
 .button-container a:last-child .btn {
     background-color: #4CAF50;
     color: white;
@@ -290,10 +300,12 @@ form button:hover {
     background-color: #388E3C;
 }
 
-/* 반응형 디자인 */
+/* ======================== */
+/* 10. 반응형 디자인 */
+/* ======================== */
 @media (max-width: 480px) {
     .button-container {
-        flex-direction: column; /* 화면이 작아지면 세로 배치 */
+        flex-direction: column;
         gap: 10px;
     }
 
