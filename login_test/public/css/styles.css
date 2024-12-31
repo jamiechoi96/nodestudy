@@ -70,7 +70,7 @@ h1, h2 {
     width: 100%;
     max-width: 500px;
     background: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -81,11 +81,12 @@ h1, h2 {
 
 .welcome-container img {
     width: 100%; /* 컨테이너의 너비에 맞춤 */
-    max-width: 300px; /* 최대 너비 설정 */
+    max-width: 200px; /* 최대 너비 설정 */
     height: auto; /* 가로 비율을 유지하며 높이를 자동 조정 */
-    border-radius: 10px; /* 모서리를 둥글게 유지 */
     object-fit: cover; /* 이미지가 컨테이너를 꽉 채우도록 설정 */
     margin-bottom: 20px;
+    padding: 10px 10px 0px 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .welcome-container h1 {
@@ -189,7 +190,6 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f9fafc;
     margin: 0;
 }
@@ -257,18 +257,4 @@ form button:hover {
 
 .button-container a:last-child .btn:hover {
     background-color: #388E3C;
-}
-
-/* ======================== */
-/* 10. 반응형 디자인 */
-/* ======================== */
-@media (max-width: 480px) {
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .button-container .btn {
-        width: 100%;
-    }
 }
